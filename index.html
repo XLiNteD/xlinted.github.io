@@ -10,7 +10,7 @@
       --primary: #1e1e2f;
       --accent: #3b3b5c;
       --highlight: #1e90ff;
-      --bg: #f9fafb;
+      --bg: #f0f4f8;
       --dark-bg: #121212;
       --card-bg: #ffffff;
     }
@@ -20,7 +20,7 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
       color: #333;
       line-height: 1.7;
     }
@@ -44,6 +44,51 @@
       font-size: 1.5em;
       margin-top: 15px;
     }
+    .social-icons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-icons a img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+      padding: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .social-icons a img:hover {
+      transform: scale(1.1);
+    }
+    .intro-slider {
+      background: #ffffffcc;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: var(--accent);
+      overflow: hidden;
+      position: relative;
+    }
+    .intro-texts {
+      display: flex;
+      animation: introScroll 25s linear infinite;
+      width: calc(100% * 5);
+    }
+    .intro-slide {
+      flex: 0 0 100%;
+      padding: 10px;
+    }
+    @keyframes introScroll {
+      0% { transform: translateX(0%); }
+      20% { transform: translateX(-100%); }
+      40% { transform: translateX(-200%); }
+      60% { transform: translateX(-300%); }
+      80% { transform: translateX(-400%); }
+      100% { transform: translateX(0%); }
+    }
     section {
       padding: 70px 30px;
       max-width: 1100px;
@@ -51,31 +96,23 @@
     }
     h2 {
       color: var(--primary);
-      font-size: 2.2em;
+      font-size: 2.4em;
       margin-bottom: 25px;
     }
     .card {
       background: var(--card-bg);
       padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
       margin-bottom: 60px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
     }
-    ul {
-      list-style-type: disc;
-      padding-left: 25px;
-    }
-    ul li {
-      margin-bottom: 12px;
-      font-size: 1.15em;
-    }
-    p {
-      font-size: 1.15em;
+    iframe {
+      border-radius: 12px;
     }
     footer {
       text-align: center;
@@ -84,98 +121,113 @@
       color: white;
       font-size: 1.1em;
     }
-    a {
-      color: var(--highlight);
-      text-decoration: none;
+    .testimonial-slider {
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 40px;
     }
-    a:hover {
-      text-decoration: underline;
+    .testimonial-track {
+      display: flex;
+      width: calc(300px * 5);
+      animation: scroll 25s linear infinite;
     }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2em;
-      }
-      header p {
-        font-size: 1.1em;
-      }
-      section {
-        padding: 40px 20px;
-      }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-1500px); }
+    }
+    .testimonial {
+      flex: 0 0 300px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-right: 20px;
+    }
+    .testimonial p {
+      font-style: italic;
+    }
+    .testimonial h4 {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .dots {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .dots span {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://via.placeholder.com/200" alt="Sushrut Dahal profile photo">
+    <img src="https://image.lichess1.org/display?fmt=webp&h=350&op=thumbnail&path=xlint:coach:xlint:hh5vqLKr.jpg&w=350&sig=687e670e763e2a346421804b5eca15510dc1d683" alt="Sushrut Dahal">
     <h1>Sushrut Dahal</h1>
-    <p>FIDE Candidate Master | International Chess Coach</p>
+    <p>Chess Coach | FIDE Rated | Online & Offline Lessons</p>
+    <div class="social-icons">
+      <a href="https://lichess.org/@/XLiNt" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Lichess_Logo_2019.svg" alt="Lichess"></a>
+      <a href="https://www.chess.com/member/ekgamekhelum" target="_blank"><img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/DavidKaufmann/phpnFZhfx.png" alt="Chess.com"></a>
+      <a href="https://www.youtube.com/@ChessSenpai" target="_blank"><img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="YouTube"></a>
+    </div>
   </header>
 
-  <section class="bio card">
-    <h2>About Me</h2>
-    <p>Hello! I’m <strong>Sushrut Dahal</strong>, a FIDE Candidate Master and one of the top-ranked players in Nepal. I’ve represented my country at prestigious events like the <em>Chess Olympiad</em> and earned silver at the National Championships. I specialize in helping students of all levels—from complete beginners to club players—achieve consistent improvement with personalized training programs.</p>
+  <section class="intro-slider">
+    <div class="intro-texts">
+      <div class="intro-slide">🌟 Elevate Your Game with Expert Coaching</div>
+      <div class="intro-slide">♟️ Learn Openings, Strategy & Endgames</div>
+      <div class="intro-slide">🏆 Proven Record of Student Improvement</div>
+      <div class="intro-slide">🌍 International Coaching Available</div>
+      <div class="intro-slide">📈 Join 100+ Happy Students Worldwide</div>
+    </div>
   </section>
 
-  <section class="services card">
-    <h2>What I Offer</h2>
-    <ul>
-      <li>1-on-1 online chess lessons via Zoom or Skype</li>
-      <li>Opening preparation and custom repertoire building</li>
-      <li>Middlegame tactics, planning, and decision-making</li>
-      <li>Endgame conversion techniques and practical drills</li>
-      <li>Annotated game reviews with feedback and homework</li>
-    </ul>
-  </section>
-
-  <section class="testimonials card">
+  <section>
     <h2>Student Testimonials</h2>
-    <p>"Coach Sushrut helped me jump from 700 to 1250 in just 4 months! His explanations are clear and he’s super encouraging." – <strong>Alex (USA)</strong></p>
-    <p>"My son became U-10 champion in our city after just 3 months of training. Coach Sushrut knows how to connect with young players." – <strong>Priya (India)</strong></p>
+    <div class="testimonial-slider">
+      <div class="testimonial-track">
+        <div class="testimonial"><p>"Coach Sushrut helped me gain 400 rating points in just 3 months!"</p><h4>– Aryan, India</h4></div>
+        <div class="testimonial"><p>"His opening explanations are clear and helped me win more games."</p><h4>– Mei, Taiwan</h4></div>
+        <div class="testimonial"><p>"I've never understood strategy until I started learning from him."</p><h4>– Liam, USA</h4></div>
+        <div class="testimonial"><p>"My son enjoys every session. Highly recommend for juniors!"</p><h4>– Priya, Nepal</h4></div>
+        <div class="testimonial"><p>"He breaks down even GM games in a simple way. Superb coach!"</p><h4>– Yusuf, UAE</h4></div>
+      </div>
+    </div>
+    <div class="dots"><span></span><span></span><span></span><span></span><span></span></div>
   </section>
 
-  <section class="contact card">
-    <h2>Get in Touch</h2>
-    <p>📧 Email: <a href="mailto:sushrutchesscoach@gmail.com">sushrutchesscoach@gmail.com</a></p>
-    <p>♟️ Lichess: <a href="https://lichess.org/@/YourLichessID" target="_blank">@YourLichessID</a></p>
-    <p>♟️ Chess.com: <a href="https://www.chess.com/member/YourUsername" target="_blank">@YourUsername</a></p>
-    <p><strong>Let’s schedule a free intro session!</strong></p>
-  </section>
-
-    <section class="videos card">
-    <h2>Video Lessons & Resources</h2>
-    <p>Check out my YouTube channel: <a href="https://www.youtube.com/@ChessSenpai" target="_blank">Chess Senpai</a> for more free lessons, tips, and game analysis.</p>
-    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/hw8Ge9Zov4Q" title="Video 1" frameborder="0" allowfullscreen></iframe>
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/PksgqP4nDH8" title="Video 2" frameborder="0" allowfullscreen></iframe>
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/LXDCXKP4yTg" title="Video 3" frameborder="0" allowfullscreen></iframe>
+  <section>
+    <h2>Watch on YouTube</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/D5rR_VCv2yw" frameborder="0" allowfullscreen></iframe>
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/c_UzU8UWYPQ" frameborder="0" allowfullscreen></iframe>
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/EDxQ_jlDneQ" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
-  <section class="videos card">
-    <h2>Video Lessons & Resources</h2>
-    <p>Check out my YouTube channel: <a href="https://www.youtube.com/@ChessSenpai" target="_blank">Chess Senpai</a> for more free lessons, tips, and game analysis. Don’t forget to <a href="https://www.youtube.com/@ChessSenpai?sub_confirmation=1" target="_blank">subscribe</a>!</p>
-    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-      <div>
-        <iframe width="320" height="180" src=https://www.youtube.com/watch?v=D5rR_VCv2yw&t=8s" title="How I beat a 2800 rated GM" frameborder="0" allowfullscreen></iframe>
-        <p style="text-align: center; margin-top: 10px;">How to beat a 2800 GM</p>
-      </div>
-      <div>
-        <iframe width="320" height="180" src="https://www.youtube.com/watch?v=QUDVdmmPpds&t=129s" title="Common Mistakes in Openings" frameborder="0" allowfullscreen></iframe>
-        <p style="text-align: center; margin-top: 10px;">Touch to move Rule </p>
-      </div>
-      <div>
-        <iframe width="320" height="180" src="https://www.youtube.com/embed/LXDCXKP4yTg" title="Improve Your Calculation Skills" frameborder="0" allowfullscreen></iframe>
-        <p style="text-align: center; margin-top: 10px;">Improve Your Calculation Skills</p>
-      </div>
-      <div>
-        <iframe width="320" height="180" src="https://www.youtube.com/embed/Gi70oFC0LMg" title="Mastering Endgames" frameborder="0" allowfullscreen></iframe>
-        <p style="text-align: center; margin-top: 10px;">Mastering Endgames</p>
-      </div>
-    </div>
+  <section>
+    <h2>Book a Lesson</h2>
+    <form action="mailto:sushrut.dahal@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="5" placeholder="Your Message or Preferred Time" required></textarea>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.644121784299!2d85.31717281506293!3d27.69975698279547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f15e8bfc9%3A0x946de9e48a2ac6b1!2sNepal%20Chess%20Association!5e0!3m2!1sen!2snp!4v1620013932984!5m2!1sen!2snp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
   <footer>
-    <p>&copy; 2025 Sushrut Dahal. Designed for global chess students.</p>
+    &copy; 2025 Sushrut Dahal. All rights reserved.
   </footer>
 </body>
 </html>
