@@ -1,337 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sushrut Dahal | Chess Coach</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1e1e2f;
-      --accent: #3b3b5c;
-      --highlight: #1e90ff;
-      --bg: #f0f4f8;
-      --dark-bg: #121212;
-      --card-bg: #ffffff;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #e3f2fd, #fce4ec);
-      color: #333;
-      line-height: 1.7;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-    }
-    header img {
-      width: 200px;
-      border-radius: 50%;
-      margin-bottom: 25px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
-    header h1 {
-      font-size: 3.5em;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.5em;
-      margin-top: 15px;
-    }
-    .social-icons {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    .social-icons a img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: white;
-      padding: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-    }
-    .social-icons a img:hover {
-      transform: scale(1.1);
-    }
-    .intro-slider {
-      background: #ffffffcc;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 1.6em;
-      font-weight: bold;
-      color: var(--accent);
-      overflow: hidden;
-      position: relative;
-    }
-    .intro-texts {
-      display: flex;
-      animation: introScroll 25s linear infinite;
-      width: calc(100% * 5);
-    }
-    .intro-slide {
-      flex: 0 0 100%;
-      padding: 10px;
-    }
-    @keyframes introScroll {
-      0% { transform: translateX(0%); }
-      20% { transform: translateX(-100%); }
-      40% { transform: translateX(-200%); }
-      60% { transform: translateX(-300%); }
-      80% { transform: translateX(-400%); }
-      100% { transform: translateX(0%); }
-    }
-    section {
-      padding: 70px 30px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      color: var(--primary);
-      font-size: 2.4em;
-      margin-bottom: 25px;
-    }
-    .card {
-      background: var(--card-bg);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-      margin-bottom: 60px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    }
-    iframe {
-      border-radius: 12px;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: var(--primary);
-      color: white;
-      font-size: 1.1em;
-    }
-    .testimonial-slider {
-      position: relative;
-      display: flex;
-      overflow: hidden;
-      width: 100%;
-      margin-bottom: 40px;
-    }
-    .testimonial-track {
-      display: flex;
-      width: calc(300px * 5);
-      animation: scroll 25s linear infinite;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-1500px); }
-    }
-    .testimonial {
-      flex: 0 0 300px;
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      margin-right: 20px;
-    }
-    .testimonial p {
-      font-style: italic;
-    }
-    .testimonial h4 {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    .dots {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .dots span {
-      height: 10px;
-      width: 10px;
-      margin: 0 5px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-    }
-    .container {
-  max-width: 720px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-section {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  padding: 24px;
-  margin-bottom: 32px;
-}
-
-h2 {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.6em;
-  margin-top: 0;
-  margin-bottom: 12px;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 1.2em;
-}
-
-.p, li {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 1em;
-  line-height: 1.6;
-}
-
-.cta {
-  background: #f0f8ff;
-  border: 1px solid #dbeafe;
-}
-
-  </style>
+	<title>Sushrut Dahal</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body>
-  <header>
-    <img src="https://image.lichess1.org/display?fmt=webp&h=350&op=thumbnail&path=xlint:coach:xlint:hh5vqLKr.jpg&w=350&sig=687e670e763e2a346421804b5eca15510dc1d683" alt="Sushrut Dahal">
-    <h1>Sushrut Dahal</h1>
-    <p>Chess Coach | FIDE Rated | Online & Offline Lessons</p>
-    <div class="social-icons">
-      <a href="https://lichess.org/@/XLiNt" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Lichess_Logo_2019.svg" alt="Lichess"></a>
-      <a href="https://www.chess.com/member/ekgamekhelum" target="_blank"><img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/DavidKaufmann/phpnFZhfx.png" alt="Chess.com"></a>
-      <a href="https://www.youtube.com/@ChessSenpai" target="_blank"><img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="YouTube"></a>
-    </div>
-  </header>
-<div class="container">
-  <!-- === CHESS COACH PROFILE START === -->
+<body class="is-preload">
+	<div id="wrapper" class="fade-in">
 
-  <section>
-    <h2>About Me</h2>
-    <p>I’m <strong>Chess Master (CM) Sushrut Dahal</strong>, 29 years old and currently Nepal’s #2 (as of 2024). I specialize in coaching beginners and intermediate players up to <strong>2000 Lichess</strong> or <strong>1800 FIDE</strong>, with a passion for personalized improvement.</p>
-  </section>
+		<!-- Intro -->
+		<div id="intro">
+			<h1>Sushrut Dahal</h1>
+			<p>CM Sushrut Dahal – National Runner-up, FIDE Certified Trainer, and Mentor. Explore his chess journey, coaching details, and top games.</p>
+			<ul class="actions">
+				<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
+			</ul>
+		</div>
 
-  <section>
-    <h2>Coaching Philosophy</h2>
-    <ul>
-      <li>Customized plans based on your strengths and weaknesses</li>
-      <li>Strong emphasis on <strong>positional understanding</strong> and <strong>tactics</strong></li>
-      <li>Focused on helping students break rating plateaus</li>
-    </ul>
-  </section>
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Sushrut Dahal</a>
+		</header>
 
-  <section>
-    <h2>Playing Experience</h2>
-    <ul>
-      <li>Represented <strong>Nepal at the Chess Olympiad 2024</strong></li>
-      <li>Played in: Asian Team Cities (Russia), Belt and Road Open (China), and GM events in South Asia</li>
-      <li>Under‑15 National Champion with numerous medals</li>
-    </ul>
-  </section>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Coach</a></li>
+				<li><a href="videos.html">Chess Senpai Videos</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			</ul>
+		</nav>
 
-  <section>
-    <h2>Teaching Experience</h2>
-    <ul>
-      <li>Mentored National Champions from U‑6 to U‑14 categories</li>
-      <li>Students up to <strong>1800 FIDE</strong> strength</li>
-      <li>Trained by top coaches: GM Rodrigo Vasquez, IM D.K. Sharma, IM A.S. Shakil, Mr. Surbir Lama</li>
-    </ul>
-  </section>
+		<!-- Main -->
+		<div id="main">
 
-  <section>
-    <h2>Other Skills</h2>
-    <p>I am also a <strong>Computer Engineer</strong>, bringing logical structure and tech tools to chess training.</p>
-  </section>
+			<!-- Featured Post -->
+			<article class="post featured">
+				<header class="major">
+					<h2>Welcome</h2>
+					<p>Hi, I'm CM Sushrut Dahal — a passionate chess trainer and player from Nepal. As a National Runner-up and FIDE Certified Trainer, my goal is to help students build solid chess fundamentals and tactical sharpness.</p>
+				</header>
+				<a href="#" class="image main"><img src="images/chess_academy.jpg" alt="Chess Academy" /></a>
+			</article>
 
-  <section>
-    <h2>Rates & Contact</h2>
-    <ul>
-      <li><strong>$15 USD/hour</strong> for beginners</li>
-      <li><strong>$20 USD/hour</strong> for intermediate players</li>
-      <li>Location: Kathmandu, Nepal</li>
-      <li>Languages: English, Hindi, Nepali, Hinglish</li>
-      <li>Message me: <strong>Whatsapp/Viber +977 976 167 9019</strong></li>
-    </ul>
-  </section>
+			<!-- Coaching Info -->
+			<section class="posts">
+				<header class="major">
+					<h2>📚 Coaching Details</h2>
+				</header>
+				<article>
+					<h3>1-on-1 Chess Classes</h3>
+					<p>Personalized lessons tailored to each student's goals and level. We cover everything from basic tactics to advanced strategy and endgames.</p>
+				</article>
+				<article>
+					<h3>Pricing</h3>
+					<p><strong>8 sessions / month</strong> – $49 (for beginners & under 1400)<br/>
+					<strong>4 sessions / month</strong> – $29 (group sessions available)<br/>
+					Free resources and guidance between sessions.</p>
+				</article>
+				<article>
+					<h3>Student Ratings</h3>
+					<p>Current students range from 300 to 2000+ across Lichess and Chess.com. Whether you're just starting or pushing toward titles, I offer structured, motivating support.</p>
+				</article>
+			</section>
 
-  <section>
-    <h2>Why Choose Me?</h2>
-    <ul>
-      <li>Trained several youth National Champions</li>
-      <li>International tournament experience</li>
-      <li>Patient, strategic and student‑focused approach</li>
-    </ul>
-  </section>
+			<!-- Our Vision -->
+			<section class="posts">
+				<header class="major">
+					<h2>🎯 My Vision</h2>
+				</header>
+				<article>
+					<p>I believe every student has the potential to become a strong chess player with the right guidance. Training is always customized based on strengths, weaknesses, and goals — whether for rating improvement, tournament prep, or simply a deeper love of the game.</p>
+				</article>
+			</section>
 
-  <section class="cta">
-    <h2>Ready to Start Your Chess Journey?</h2>
-    <p>Let’s talk! Message me on <strong>Whatsapp or Viber: +977 976 167 9019</strong></p>
-  </section>
+			<!-- Testimonials -->
+			<section class="posts">
+				<header class="major">
+					<h2>🗣️ What Students Say</h2>
+				</header>
+				<article>
+					<p>"Coach Dahal helped me go from 1000 to 1700 Lichess Rapid in just 6 months!" – Aarav, 14</p>
+				</article>
+				<article>
+					<p>"The structured opening prep and analysis tools I learned here gave me a real edge." – Mira, Club Player</p>
+				</article>
+			</section>
 
-  <!-- === CHESS COACH PROFILE END === -->
-</div>
+		</div>
 
-  <section class="intro-slider">
-    <div class="intro-texts">
-      <div class="intro-slide">Elevate Your Game with Expert Coaching</div>
-      <div class="intro-slide"> Learn Openings, Strategy & Endgames</div>
-      <div class="intro-slide"> Proven Record of Student Improvement</div>
-      <div class="intro-slide"> International Coaching Available</div>
-      <div class="intro-slide"> Join 100+ Happy Students Worldwide</div>
-    </div>
-  </section>
+		<!-- Footer -->
+		<footer id="footer">
+			<section class="split contact">
+				<section class="alt">
+					<h3>Location</h3>
+					<p>Kathmandu, Nepal</p>
+				</section>
+				<section>
+					<h3>Phone</h3>
+					<p><a href="#">+977-9800000000</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="#">contact@pavilionschess.com</a></p>
+				</section>
+				<section>
+					<h3>Social</h3>
+					<ul class="icons alt">
+						<li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
 
-  <section>
-    <h2>Student Testimonials</h2>
-    <div class="testimonial-slider">
-      <div class="testimonial-track">
-        <div class="testimonial"><p>"Coach Sushrut helped me gain 400 rating points in just 3 months!"</p><h4>– Aryan, India</h4></div>
-        <div class="testimonial"><p>"His opening explanations are clear and helped me win more games."</p><h4>– Mei, Taiwan</h4></div>
-        <div class="testimonial"><p>"I've never understood strategy until I started learning from him."</p><h4>– Liam, USA</h4></div>
-        <div class="testimonial"><p>"My son enjoys every session. Highly recommend for juniors!"</p><h4>– Priya, Nepal</h4></div>
-        <div class="testimonial"><p>"He breaks down even GM games in a simple way. Superb coach!"</p><h4>– Yusuf, UAE</h4></div>
-      </div>
-    </div>
-    <div class="dots"><span></span><span></span><span></span><span></span><span></span></div>
-  </section>
+		<div id="copyright">
+			<ul><li>&copy; Sushrut Dahal</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+		</div>
+	</div>
 
-  <section>
-    <h2>Watch on YouTube</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/D5rR_VCv2yw" frameborder="0" allowfullscreen></iframe>
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/c_UzU8UWYPQ" frameborder="0" allowfullscreen></iframe>
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/EDxQ_jlDneQ" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section>
-    <h2>Book a Lesson</h2>
-    <form action="mailto:sushrut.dahal@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="5" placeholder="Your Message or Preferred Time" required></textarea>
-      <button type="submit">Book Now</button>
-    </form>
-  </section>
-
-  <section>
-    <h2>Location</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.644121784299!2d85.31717281506293!3d27.69975698279547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190f15e8bfc9%3A0x946de9e48a2ac6b1!2sNepal%20Chess%20Association!5e0!3m2!1sen!2snp!4v1620013932984!5m2!1sen!2snp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </section>
-
-  <footer>
-    &copy; 2025 Sushrut Dahal. All rights reserved.
-  </footer>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
