@@ -1,137 +1,191 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Sushrut Dahal</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sushrut Dahal | Chess Coach</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e1e2f;
+      --accent: #3b3b5c;
+      --highlight: #1e90ff;
+      --bg: #f0f4f8;
+      --dark-bg: #121212;
+      --card-bg: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      color: #333;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    header img {
+      width: 200px;
+      border-radius: 50%;
+      margin-bottom: 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.5em;
+      margin-top: 15px;
+    }
+    .social-icons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-icons a img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+      padding: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .social-icons a img:hover {
+      transform: scale(1.1);
+    }
+    .intro-slider {
+      background: #ffffffcc;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: var(--accent);
+      overflow: hidden;
+      position: relative;
+    }
+    .intro-texts {
+      display: flex;
+      animation: introScroll 25s linear infinite;
+      width: calc(100% * 5);
+    }
+    .intro-slide {
+      flex: 0 0 100%;
+      padding: 10px;
+    }
+    @keyframes introScroll {
+      0% { transform: translateX(0%); }
+      20% { transform: translateX(-100%); }
+      40% { transform: translateX(-200%); }
+      60% { transform: translateX(-300%); }
+      80% { transform: translateX(-400%); }
+      100% { transform: translateX(0%); }
+    }
+    section {
+      padding: 70px 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 2.4em;
+      margin-bottom: 25px;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      margin-bottom: 60px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+    iframe {
+      border-radius: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--primary);
+      color: white;
+      font-size: 1.1em;
+    }
+    .testimonial-slider {
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    .testimonial-track {
+      display: flex;
+      width: calc(300px * 5);
+      animation: scroll 25s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-1500px); }
+    }
+    .testimonial {
+      flex: 0 0 300px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-right: 20px;
+    }
+    .testimonial p {
+      font-style: italic;
+    }
+    .testimonial h4 {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .dots {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .dots span {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
 </head>
-<body class="is-preload">
-	<div id="wrapper" class="fade-in">
+<body>
+  <header>
+    <img src="https://image.lichess1.org/display?fmt=webp&h=350&op=thumbnail&path=xlint:coach:xlint:hh5vqLKr.jpg&w=350&sig=687e670e763e2a346421804b5eca15510dc1d683" alt="Sushrut Dahal">
+    <h1>Sushrut Dahal</h1>
+    <p>Chess Coach | FIDE Rated | Online & Offline Lessons</p>
+    <div class="social-icons">
+      <a href="https://lichess.org/@/XLiNt" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Lichess_Logo_2019.svg" alt="Lichess"></a>
+      <a href="https://www.chess.com/member/ekgamekhelum" target="_blank"><img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/DavidKaufmann/phpnFZhfx.png" alt="Chess.com"></a>
+      <a href="https://www.youtube.com/@ChessSenpai" target="_blank"><img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="YouTube"></a>
+    </div>
+  </header>
 
-		<!-- Intro -->
-		<div id="intro">
-			<h1>Sushrut Dahal</h1>
-			<p>CM Sushrut Dahal – National Runner-up, FIDE Certified Trainer, and Mentor. Explore his chess journey, coaching details, and top games.</p>
-			<ul class="actions">
-				<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
-			</ul>
-		</div>
+  <section class="intro-slider">
+    <div class="intro-texts">
+      <div class="intro-slide"> Elevate Your Game with Expert Coaching</div>
+      <div class="intro-slide"> Learn Openings, Strategy & Endgames</div>
+      <div class="intro-slide"> Proven Record of Student Improvement</div>
+      <div class="intro-slide">International Coaching Available</div>
+      <div class="intro-slide">Join 100+ Happy Students Worldwide</div>
+    </div>
+  </section>
 
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="logo">Sushrut Dahal</a>
-		</header>
-
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="about.html">About Coach</a></li>
-				<li><a href="videos.html">Chess Senpai Videos</a></li>
-			</ul>
-			<ul class="icons">
-				<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- Featured Post -->
-			<article class="post featured">
-				<header class="major">
-					<h2>Welcome</h2>
-					<p>Hi, I'm CM Sushrut Dahal — a passionate chess trainer and player from Nepal. As a National Runner-up and FIDE Certified Trainer, my goal is to help students build solid chess fundamentals and tactical sharpness.</p>
-				</header>
-				<a href="#" class="image main"><img src="images/chess_academy.jpg" alt="Chess Academy" /></a>
-			</article>
-
-			<!-- Coaching Info -->
-			<section class="posts">
-				<header class="major">
-					<h2>📚 Coaching Details</h2>
-				</header>
-				<article>
-					<h3>1-on-1 Chess Classes</h3>
-					<p>Personalized lessons tailored to each student's goals and level. We cover everything from basic tactics to advanced strategy and endgames.</p>
-				</article>
-				<article>
-					<h3>Pricing</h3>
-					<p><strong>8 sessions / month</strong> – $49 (for beginners & under 1400)<br/>
-					<strong>4 sessions / month</strong> – $29 (group sessions available)<br/>
-					Free resources and guidance between sessions.</p>
-				</article>
-				<article>
-					<h3>Student Ratings</h3>
-					<p>Current students range from 300 to 2000+ across Lichess and Chess.com. Whether you're just starting or pushing toward titles, I offer structured, motivating support.</p>
-				</article>
-			</section>
-
-			<!-- Our Vision -->
-			<section class="posts">
-				<header class="major">
-					<h2>🎯 My Vision</h2>
-				</header>
-				<article>
-					<p>I believe every student has the potential to become a strong chess player with the right guidance. Training is always customized based on strengths, weaknesses, and goals — whether for rating improvement, tournament prep, or simply a deeper love of the game.</p>
-				</article>
-			</section>
-
-			<!-- Testimonials -->
-			<section class="posts">
-				<header class="major">
-					<h2>🗣️ What Students Say</h2>
-				</header>
-				<article>
-					<p>"Coach Dahal helped me go from 1000 to 1700 Lichess Rapid in just 6 months!" – Aarav, 14</p>
-				</article>
-				<article>
-					<p>"The structured opening prep and analysis tools I learned here gave me a real edge." – Mira, Club Player</p>
-				</article>
-			</section>
-
-		</div>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<section class="split contact">
-				<section class="alt">
-					<h3>Location</h3>
-					<p>Kathmandu, Nepal</p>
-				</section>
-				<section>
-					<h3>Phone</h3>
-					<p><a href="#">+977-9800000000</a></p>
-				</section>
-				<section>
-					<h3>Email</h3>
-					<p><a href="#">contact@pavilionschess.com</a></p>
-				</section>
-				<section>
-					<h3>Social</h3>
-					<ul class="icons alt">
-						<li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-					</ul>
-				</section>
-			</section>
-		</footer>
-
-		<div id="copyright">
-			<ul><li>&copy; Sushrut Dahal</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-		</div>
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-</body>
-</html>
+  <!-- remaining content continues here -->
